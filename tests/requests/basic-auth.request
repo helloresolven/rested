@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>baseURL</key>
+	<string>http://test.webdav.org/auth-basic/</string>
+	<key>followRedirect</key>
+	<true/>
+	<key>headers</key>
+	<array/>
+	<key>httpMethod</key>
+	<string>GET</string>
+	<key>parameters</key>
+	<array/>
+	<key>parametersType</key>
+	<integer>0</integer>
+	<key>presentBeforeChallenge</key>
+	<true/>
+	<key>stringEncoding</key>
+	<integer>4</integer>
+	<key>useJSONP</key>
+	<false/>
+	<key>username</key>
+	<string>user1</string>
+	<key>usingHTTPBody</key>
+	<false/>
+</dict>
+</plist>

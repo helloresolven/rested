@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>baseURL</key>
+	<string>http://localhost:3000/test/</string>
+	<key>followRedirect</key>
+	<true/>
+	<key>headers</key>
+	<array>
+		<dict>
+			<key>header</key>
+			<string>Header</string>
+			<key>inUse</key>
+			<true/>
+			<key>value</key>
+			<string>Value</string>
+		</dict>
+	</array>
+	<key>httpMethod</key>
+	<string>PATCH</string>
+	<key>parameters</key>
+	<array>
+		<dict>
+			<key>inUse</key>
+			<true/>
+			<key>parameter</key>
+			<string>Parameter</string>
+			<key>value</key>
+			<string>Value</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<true/>
+			<key>parameter</key>
+			<string>Another</string>
+			<key>value</key>
+			<string>Value</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<true/>
+			<key>parameter</key>
+			<string>Flex</string>
+			<key>value</key>
+			<string>Value</string>
+		</dict>
+	</array>
+	<key>parametersType</key>
+	<integer>1</integer>
+	<key>presentBeforeChallenge</key>
+	<false/>
+	<key>stringEncoding</key>
+	<integer>4</integer>
+	<key>useJSONP</key>
+	<false/>
+	<key>usingHTTPBody</key>
+	<false/>
+</dict>
+</plist>
