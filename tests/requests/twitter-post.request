@@ -20,7 +20,7 @@
 			<key>parameter</key>
 			<string>status</string>
 			<key>value</key>
-			<string>#tweetfromthefuture</string>
+			<string>this is a tweet. just a simple tweet. #GIFBrewery</string>
 		</dict>
 	</array>
 	<key>parametersType</key>

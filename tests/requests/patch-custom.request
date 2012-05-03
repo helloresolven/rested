@@ -21,6 +21,8 @@
 	</array>
 	<key>httpMethod</key>
 	<string>PATCH</string>
+	<key>paramBodyUIChoice</key>
+	<integer>2</integer>
 	<key>parameters</key>
 	<array/>
 	<key>parametersType</key>

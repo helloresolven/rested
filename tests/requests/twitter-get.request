@@ -12,6 +12,8 @@
 	<string>GET</string>
 	<key>oauthToken</key>
 	<string>x-coredata://B6A22BF7-854B-4D21-90C8-245D756E90C4/OAuthToken/p8</string>
+	<key>paramBodyUIChoice</key>
+	<integer>1</integer>
 	<key>parameters</key>
 	<array>
 		<dict>

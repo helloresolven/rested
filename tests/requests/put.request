@@ -19,6 +19,8 @@
 	</array>
 	<key>httpMethod</key>
 	<string>PUT</string>
+	<key>paramBodyUIChoice</key>
+	<integer>1</integer>
 	<key>parameters</key>
 	<array>
 		<dict>
@@ -39,7 +41,7 @@
 		</dict>
 	</array>
 	<key>parametersType</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>presentBeforeChallenge</key>
 	<true/>
 	<key>stringEncoding</key>
