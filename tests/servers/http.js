@@ -10,7 +10,23 @@ var server = http.createServer(function (req, res) {
   });
   
   req.on("end", function() {
+    console.log(new Date)
     var parsedURL = url.parse(req.url, true);
+    
+    var responseHeaders = {"Content-Type" : "application/json"}
+    
+    
+    if(req.headers.cookie) {
+      console.log("Has a cookie! %j", req.headers.cookie);
+      
+    } else {
+      console.log("No cookie :(!");
+      responseHeaders["Set-Cookie"] = "uid=124";
+    }
+    
+    if(req.headers['content-type'] === 'application/json' && buffer.length > 0) {
+      console.log(JSON.parse(buffer));
+    }
     
     var obj = {
       method:req.method,
@@ -20,10 +36,7 @@ var server = http.createServer(function (req, res) {
       body:buffer
     };
     
-    res.writeHead(200, {
-      "Content-Type": "application/json"
-    });
-    
+    res.writeHead(200, responseHeaders);
     res.end(JSON.stringify(obj));
   });
 });
