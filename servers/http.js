@@ -27,6 +27,8 @@ var server = http.createServer(function (req, res) {
     }
     
     if(req.headers['accept'] === 'text/html') {
+      responseHeaders["Content-Type"] = "text/html";
+      
       res.writeHead(200, responseHeaders);
       
       fs.readFile(__dirname + '/test.html', function (err, data) {
