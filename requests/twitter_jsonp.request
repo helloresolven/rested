@@ -2,21 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>JSONPfile</key>
-	<string>~/Desktop/patrick/RESTed tests/test.js</string>
 	<key>baseURL</key>
 	<string>http://api.twitter.com/1/statuses/user_timeline.json</string>
 	<key>followRedirect</key>
 	<false/>
+	<key>handleJSONPCallbacks</key>
+	<true/>
 	<key>headers</key>
 	<array/>
 	<key>httpMethod</key>
 	<string>GET</string>
+	<key>jsonpScript</key>
+	<string>function callback (obj) {
+return "" + obj.length;
+}</string>
+	<key>paramBodyUIChoice</key>
+	<integer>0</integer>
 	<key>parameters</key>
 	<array>
 		<dict>
 			<key>inUse</key>
-			<false/>
+			<true/>
 			<key>parameter</key>
 			<string>callback</string>
 			<key>value</key>
@@ -45,8 +51,6 @@
 	<false/>
 	<key>stringEncoding</key>
 	<integer>4</integer>
-	<key>useJSONP</key>
-	<true/>
 	<key>usingHTTPBody</key>
 	<false/>
 </dict>

@@ -1,0 +1,26 @@
+{
+  "name": "rested-tests",
+  "version": "0.0.1",
+  "description": "test servers for RESTed",
+  "main": "http.js",
+  "dependencies": {
+    "filed": "~0.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hellopatrick/rested.git"
+  },
+  "keywords": [
+    "rested",
+    "http",
+    "mac",
+    "os",
+    "x"
+  ],
+  "author": "Patrick Rogers",
+  "license": "BSD"
+}

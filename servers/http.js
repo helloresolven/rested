@@ -2,6 +2,8 @@ var http = require("http"),
     url = require("url"),
     fs = require("fs");
 
+var filed = require('filed');
+
 var server = http.createServer(function (req, res) {
   req.setEncoding("utf8");
   
@@ -12,8 +14,8 @@ var server = http.createServer(function (req, res) {
   
   req.on("end", function() {
     console.log(new Date)
-    var parsedURL = url.parse(req.url, true);
     
+    var parsedURL = url.parse(req.url, true);
     var responseHeaders = {};
     
     if(req.headers.cookie) {
@@ -28,17 +30,7 @@ var server = http.createServer(function (req, res) {
     
     if(req.headers['accept'] === 'text/html') {
       responseHeaders["Content-Type"] = "text/html";
-      
-      res.writeHead(200, responseHeaders);
-      
-      fs.readFile(__dirname + '/test.html', function (err, data) {
-          if (err) {
-              res.statusCode = 500;
-              res.end(String(err));
-          } else  {
-            res.end(data);
-          }
-      });
+      filed(__dirname + '/test.html').pipe(res);
     } else {
       responseHeaders["Content-Type"] = "application/json";
       
