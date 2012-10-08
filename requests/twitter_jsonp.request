@@ -18,8 +18,6 @@
 		$("&lt;img /&gt;").attr("src", item.user. profile_image_url).appendTo(".jsonpresults");
 	});
 }</string>
-	<key>oauthToken</key>
-	<string>x-coredata://B6A22BF7-854B-4D21-90C8-245D756E90C4/OAuthToken/p14</string>
 	<key>paramBodyUIChoice</key>
 	<integer>0</integer>
 	<key>parameters</key>

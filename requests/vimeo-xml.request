@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://vimeo.com/api/v2/video/50271050.json</string>
+	<string>http://vimeo.com/api/v2/video/50271050.xml</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
@@ -19,16 +19,7 @@
 	<key>paramBodyUIChoice</key>
 	<integer>1</integer>
 	<key>parameters</key>
-	<array>
-		<dict>
-			<key>inUse</key>
-			<true/>
-			<key>parameter</key>
-			<string>callback</string>
-			<key>value</key>
-			<string>test</string>
-		</dict>
-	</array>
+	<array/>
 	<key>parametersType</key>
 	<integer>0</integer>
 	<key>presentBeforeChallenge</key>
