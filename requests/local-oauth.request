@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://api.twitter.com/1/statuses/update.json</string>
+	<string>http://localhost:3000/</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
@@ -17,18 +17,9 @@
 	<key>oauthToken</key>
 	<string>x-coredata://B6A22BF7-854B-4D21-90C8-245D756E90C4/OAuthToken/p14</string>
 	<key>paramBodyUIChoice</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>parameters</key>
-	<array>
-		<dict>
-			<key>inUse</key>
-			<true/>
-			<key>parameter</key>
-			<string>status</string>
-			<key>value</key>
-			<string>this is a tweet. just a simple tweet. #GIFBrewery</string>
-		</dict>
-	</array>
+	<array/>
 	<key>parametersType</key>
 	<integer>0</integer>
 	<key>presentBeforeChallenge</key>

@@ -3,30 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://api.twitter.com/1/statuses/update.json</string>
+	<string>http://vimeo.com/api/v2/video/50271050.json</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
-	<false/>
+	<true/>
 	<key>headers</key>
 	<array/>
 	<key>httpMethod</key>
-	<string>POST</string>
+	<string>GET</string>
 	<key>jsonpScript</key>
-	<string></string>
-	<key>oauthToken</key>
-	<string>x-coredata://B6A22BF7-854B-4D21-90C8-245D756E90C4/OAuthToken/p14</string>
+	<string>function test(ary) {
+	return JSON.stringify(ary, null, "    ");
+}</string>
 	<key>paramBodyUIChoice</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>parameters</key>
 	<array>
 		<dict>
 			<key>inUse</key>
 			<true/>
 			<key>parameter</key>
-			<string>status</string>
+			<string>callback</string>
 			<key>value</key>
-			<string>this is a tweet. just a simple tweet. #GIFBrewery</string>
+			<string>test</string>
 		</dict>
 	</array>
 	<key>parametersType</key>

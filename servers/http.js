@@ -7,45 +7,73 @@ var filed = require('filed');
 var server = http.createServer(function (req, res) {
   req.setEncoding("utf8");
   
-  var buffer = ''
+  req.buffer = ''
   req.on("data", function(data) {
-    buffer += data;
+    req.buffer += data;
   });
   
   req.on("end", function() {
-    console.log(new Date)
-    
-    var parsedURL = url.parse(req.url, true);
-    var responseHeaders = {};
-    
+    console.log(new Date);
+        
     if(req.headers.cookie) {
       console.log("Has a cookie: %j", req.headers.cookie);
-    } else {
-      responseHeaders["Set-Cookie"] = "uid=124";
     }
     
-    if(req.headers['content-type'] === 'application/json' && buffer.length > 0) {
-      console.log("Parsed HTTP Body: " + JSON.parse(buffer));
+    if(req.headers['content-type'] === 'application/json' && req.buffer.length > 0) {
+      console.log("Parsed HTTP Body: " + JSON.stringify(JSON.parse(req.buffer), null, "  "));
     }
     
-    if(req.headers['accept'] === 'text/html') {
-      responseHeaders["Content-Type"] = "text/html";
-      filed(__dirname + '/test.html').pipe(res);
-    } else {
-      responseHeaders["Content-Type"] = "application/json";
-      
-      var obj = {
-        method:req.method,
-        path:parsedURL.pathname,
-        query:parsedURL.query,
-        headers:req.headers,
-        body:buffer
-      };
-      
-      res.writeHead(200, responseHeaders);
-      res.end(JSON.stringify(obj));
-    }
+    var parsedURL = url.parse(req.url, true);
+    
+    var info = {
+      method:req.method,
+      path:parsedURL.pathname,
+      query:parsedURL.query,
+      headers:req.headers,
+      body:req.buffer
+    };
+    
+    setTimeout(function() {
+      handleRequest(info, res);
+    }, 0);
   });
 });
+
+function handleRequest(req, response) {
+  console.log(req.path);
+  
+  if(req.path === "/test.html") {
+    filed(__dirname + '/test.html').pipe(response);
+    return;
+  }
+    
+  if(req.path === "/auth") {
+    var authHeader = req.headers.authorization || "";
+    var token = authHeader.split(/\s+/).pop() || "";
+    var auth = new Buffer(token, "base64").toString();
+    var credentials = auth.split(":");
+    var user = credentials[0], pass = credentials[1];
+    
+    if(user === "test" && pass === "test") {
+      response.writeHead(200, { "Content-Type":"application/json" });
+      response.end(JSON.stringify(req));
+    } else {
+      response.writeHead(401, {"WWW-Authenticate" : "Basic"});
+      response.end();
+    }
+    
+    return;
+  }
+  
+  response.writeHead(200, { "Content-Type":"application/json" });
+
+  if(req.query.callback) {
+    response.write(req.query.callback + "(" + JSON.stringify(req) + ");");
+  } else {
+    response.write(JSON.stringify(req));
+  }
+  
+  response.end();
+}
 
 server.listen(3000);

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://api.twitter.com/1/statuses/user_timeline.json</string>
+	<string>https://api.twitter.com/1/statuses/user_timeline.json</string>
 	<key>followRedirect</key>
 	<false/>
 	<key>handleJSONPCallbacks</key>
@@ -13,9 +13,13 @@
 	<key>httpMethod</key>
 	<string>GET</string>
 	<key>jsonpScript</key>
-	<string>function callback (obj) {
-return "" + obj.length;
+	<string>function callback(data) {
+	$.each(data, function(i,item){
+		$("&lt;img /&gt;").attr("src", item.user. profile_image_url).appendTo(".jsonpresults");
+	});
 }</string>
+	<key>oauthToken</key>
+	<string>x-coredata://B6A22BF7-854B-4D21-90C8-245D756E90C4/OAuthToken/p14</string>
 	<key>paramBodyUIChoice</key>
 	<integer>0</integer>
 	<key>parameters</key>

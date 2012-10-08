@@ -6,6 +6,8 @@
 	<string>http://localhost:3000/test/</string>
 	<key>followRedirect</key>
 	<true/>
+	<key>handleJSONPCallbacks</key>
+	<false/>
 	<key>headers</key>
 	<array>
 		<dict>
@@ -19,6 +21,8 @@
 	</array>
 	<key>httpMethod</key>
 	<string>PATCH</string>
+	<key>jsonpScript</key>
+	<string></string>
 	<key>paramBodyUIChoice</key>
 	<integer>1</integer>
 	<key>parameters</key>
@@ -27,9 +31,9 @@
 			<key>inUse</key>
 			<true/>
 			<key>parameter</key>
-			<string>Parameter</string>
+			<string>test</string>
 			<key>value</key>
-			<string>Value</string>
+			<string>{"par":72}</string>
 		</dict>
 		<dict>
 			<key>inUse</key>
@@ -37,7 +41,7 @@
 			<key>parameter</key>
 			<string>Another</string>
 			<key>value</key>
-			<string>Value</string>
+			<string>[1,2,3]</string>
 		</dict>
 		<dict>
 			<key>inUse</key>
@@ -45,7 +49,15 @@
 			<key>parameter</key>
 			<string>Flex</string>
 			<key>value</key>
-			<string>Value</string>
+			<string>24.532</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<true/>
+			<key>parameter</key>
+			<string>Parameter</string>
+			<key>value</key>
+			<string>"128498124812948129428194"</string>
 		</dict>
 	</array>
 	<key>parametersType</key>
@@ -54,8 +66,6 @@
 	<false/>
 	<key>stringEncoding</key>
 	<integer>4</integer>
-	<key>useJSONP</key>
-	<false/>
 	<key>usingHTTPBody</key>
 	<false/>
 </dict>

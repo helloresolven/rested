@@ -10,12 +10,14 @@
 	<array/>
 	<key>httpMethod</key>
 	<string>GET</string>
+	<key>paramBodyUIChoice</key>
+	<integer>2</integer>
 	<key>parameters</key>
 	<array/>
 	<key>parametersType</key>
 	<integer>0</integer>
 	<key>presentBeforeChallenge</key>
-	<true/>
+	<false/>
 	<key>stringEncoding</key>
 	<integer>4</integer>
 	<key>useJSONP</key>
