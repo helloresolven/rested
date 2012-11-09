@@ -11,4 +11,4 @@ It also includes all the test requests and servers used to make sure RESTed work
 
 ## Updates
 
-[2012-10-08] RESTed 2.5 is reaching the end of the beta period. The beta has been updated to version 2, [available now](http://helloresolven.com/betas/RESTed-beta-2.zip).
+[2012-11-09] RESTed 2.5 is reaching the end of the beta period. The beta has been updated to version 3, [available now](http://helloresolven.com/betas/RESTed-2.5-beta.zip).
