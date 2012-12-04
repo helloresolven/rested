@@ -11,4 +11,4 @@ It also includes all the test requests and servers used to make sure RESTed work
 
 ## Updates
 
-[2012-11-21] [RESTed 2.5.1 beta](http://www.helloresolven.com/betas/RESTed-2.5.1-pre.zip).  This release is just a bug fix.
+[2012-12-04] Please visit [RESTed pre-release site](http://www.helloresolven.com/betas/rested/) for access to pre-release & beta versions of RESTed.
