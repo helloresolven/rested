@@ -6,6 +6,8 @@
 	<string>http://localhost:3000/test/</string>
 	<key>followRedirect</key>
 	<true/>
+	<key>handleJSONPCallbacks</key>
+	<false/>
 	<key>headers</key>
 	<array>
 		<dict>
@@ -19,8 +21,10 @@
 	</array>
 	<key>httpMethod</key>
 	<string>PUT</string>
+	<key>jsonpScript</key>
+	<string></string>
 	<key>paramBodyUIChoice</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>parameters</key>
 	<array>
 		<dict>
@@ -46,8 +50,6 @@
 	<true/>
 	<key>stringEncoding</key>
 	<integer>4</integer>
-	<key>useJSONP</key>
-	<false/>
 	<key>username</key>
 	<string>test</string>
 	<key>usingHTTPBody</key>

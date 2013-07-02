@@ -3,15 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://api.twitter.com/1/statuses/home_timeline.json</string>
+	<string>http://api.twitter.com/1.1/statuses/home_timeline.json</string>
 	<key>followRedirect</key>
 	<true/>
+	<key>handleJSONPCallbacks</key>
+	<false/>
 	<key>headers</key>
 	<array/>
 	<key>httpMethod</key>
 	<string>GET</string>
+	<key>jsonpScript</key>
+	<string></string>
 	<key>oauthToken</key>
-	<string>x-coredata://B6A22BF7-854B-4D21-90C8-245D756E90C4/OAuthToken/p8</string>
+	<string>x-coredata://2BEA36B7-2294-4893-A164-3A1F32224235/OAuthToken/p1</string>
 	<key>paramBodyUIChoice</key>
 	<integer>1</integer>
 	<key>parameters</key>
@@ -39,8 +43,6 @@
 	<false/>
 	<key>stringEncoding</key>
 	<integer>4</integer>
-	<key>useJSONP</key>
-	<false/>
 	<key>usingHTTPBody</key>
 	<false/>
 </dict>

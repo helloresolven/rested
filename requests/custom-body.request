@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://localhost:3000/test/</string>
+	<string>http://localhost:3000/user/2/messages</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
@@ -12,17 +12,27 @@
 	<array>
 		<dict>
 			<key>header</key>
-			<string>Header</string>
+			<string>Content-Type</string>
 			<key>inUse</key>
 			<true/>
 			<key>value</key>
-			<string>Value</string>
+			<string>application/json;encoding=utf-8</string>
+		</dict>
+		<dict>
+			<key>header</key>
+			<string>User-Agent</string>
+			<key>inUse</key>
+			<true/>
+			<key>value</key>
+			<string>Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US)</string>
 		</dict>
 	</array>
 	<key>httpMethod</key>
-	<string>PATCH</string>
+	<string>POST</string>
 	<key>jsonpScript</key>
 	<string></string>
+	<key>oauthToken</key>
+	<string>x-coredata://2BEA36B7-2294-4893-A164-3A1F32224235/OAuthToken/p3</string>
 	<key>paramBodyUIChoice</key>
 	<integer>0</integer>
 	<key>parameters</key>
@@ -31,33 +41,25 @@
 			<key>inUse</key>
 			<true/>
 			<key>parameter</key>
-			<string>test</string>
+			<string>message</string>
 			<key>value</key>
-			<string>{"par":72}</string>
+			<string>hello, world.</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<false/>
+			<key>parameter</key>
+			<string>subject</string>
+			<key>value</key>
+			<string>next msg, plz.</string>
 		</dict>
 		<dict>
 			<key>inUse</key>
 			<true/>
 			<key>parameter</key>
-			<string>Another</string>
+			<string>cc</string>
 			<key>value</key>
-			<string>[1,2,3]</string>
-		</dict>
-		<dict>
-			<key>inUse</key>
-			<true/>
-			<key>parameter</key>
-			<string>Flex</string>
-			<key>value</key>
-			<string>24.532</string>
-		</dict>
-		<dict>
-			<key>inUse</key>
-			<true/>
-			<key>parameter</key>
-			<string>Parameter</string>
-			<key>value</key>
-			<string>"128498124812948129428194"</string>
+			<string>patrick at helloresolven dot com</string>
 		</dict>
 	</array>
 	<key>parametersType</key>

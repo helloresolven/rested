@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://api.twitter.com/1.1/statuses/update.json</string>
+	<string>https://api.tumblr.com/v2/user/info</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
@@ -11,24 +11,15 @@
 	<key>headers</key>
 	<array/>
 	<key>httpMethod</key>
-	<string>POST</string>
+	<string>GET</string>
 	<key>jsonpScript</key>
 	<string></string>
 	<key>oauthToken</key>
-	<string>x-coredata://2BEA36B7-2294-4893-A164-3A1F32224235/OAuthToken/p1</string>
+	<string>x-coredata://2BEA36B7-2294-4893-A164-3A1F32224235/OAuthToken/p2</string>
 	<key>paramBodyUIChoice</key>
 	<integer>0</integer>
 	<key>parameters</key>
-	<array>
-		<dict>
-			<key>inUse</key>
-			<true/>
-			<key>parameter</key>
-			<string>status</string>
-			<key>value</key>
-			<string>just testing some things, again.</string>
-		</dict>
-	</array>
+	<array/>
 	<key>parametersType</key>
 	<integer>0</integer>
 	<key>presentBeforeChallenge</key>

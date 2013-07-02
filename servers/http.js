@@ -14,7 +14,8 @@ var server = http.createServer(function (req, res) {
   
   req.on("end", function() {
     console.log(new Date);
-        
+    console.log(req.path);
+
     if(req.headers.cookie) {
       console.log("Has a cookie: %j", req.headers.cookie);
     }
@@ -64,8 +65,18 @@ function handleRequest(req, response) {
     
     return;
   }
-  
-  response.writeHead(200, { "Content-Type":"application/json" });
+
+  if(req.path === '/redirect') {
+    response.writeHead(301, {'Location': '/hello'});
+    response.end();
+    return;
+  }
+
+  var responseHeaders = { "Content-Type":"application/json", "Test-Header-Encoding":"<b>not bold</b>"  };
+
+  if(req.path === '/getcookie') { responseHeaders['Set-Cookie'] = 'a=b'; }
+
+  response.writeHead(200, responseHeaders);
 
   if(req.query.callback) {
     response.write(req.query.callback + "(" + JSON.stringify(req) + ");");

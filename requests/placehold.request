@@ -3,13 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://placehold.it/252x24</string>
+	<string>http://placehold.it/720x360</string>
 	<key>followRedirect</key>
 	<true/>
+	<key>handleJSONPCallbacks</key>
+	<false/>
 	<key>headers</key>
 	<array/>
 	<key>httpMethod</key>
 	<string>GET</string>
+	<key>jsonpScript</key>
+	<string></string>
 	<key>paramBodyUIChoice</key>
 	<integer>0</integer>
 	<key>parameters</key>
@@ -20,8 +24,6 @@
 	<false/>
 	<key>stringEncoding</key>
 	<integer>4</integer>
-	<key>useJSONP</key>
-	<false/>
 	<key>usingHTTPBody</key>
 	<false/>
 </dict>

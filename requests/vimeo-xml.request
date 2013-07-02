@@ -7,7 +7,7 @@
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
-	<true/>
+	<false/>
 	<key>headers</key>
 	<array/>
 	<key>httpMethod</key>

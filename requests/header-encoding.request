@@ -3,19 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://api.twitter.com/1.1/statuses/update.json</string>
+	<string>http://localhost:3000/</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
 	<false/>
 	<key>headers</key>
-	<array/>
+	<array>
+		<dict>
+			<key>header</key>
+			<string>Content-Type-Encoding</string>
+			<key>inUse</key>
+			<true/>
+			<key>value</key>
+			<string>&lt;strong&gt;test&lt;/strong&gt;</string>
+		</dict>
+		<dict>
+			<key>header</key>
+			<string>Content-Type</string>
+			<key>inUse</key>
+			<false/>
+			<key>value</key>
+			<string>application/json</string>
+		</dict>
+	</array>
 	<key>httpMethod</key>
 	<string>POST</string>
 	<key>jsonpScript</key>
 	<string></string>
-	<key>oauthToken</key>
-	<string>x-coredata://2BEA36B7-2294-4893-A164-3A1F32224235/OAuthToken/p1</string>
 	<key>paramBodyUIChoice</key>
 	<integer>0</integer>
 	<key>parameters</key>
@@ -24,13 +39,21 @@
 			<key>inUse</key>
 			<true/>
 			<key>parameter</key>
-			<string>status</string>
+			<string>oklahoma</string>
 			<key>value</key>
-			<string>just testing some things, again.</string>
+			<string>oklahoma city</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<true/>
+			<key>parameter</key>
+			<string>texas</string>
+			<key>value</key>
+			<string>austin</string>
 		</dict>
 	</array>
 	<key>parametersType</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>presentBeforeChallenge</key>
 	<false/>
 	<key>stringEncoding</key>

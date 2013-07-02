@@ -4,7 +4,8 @@
   "description": "test servers for RESTed",
   "main": "http.js",
   "dependencies": {
-    "filed": "~0.0.7"
+    "filed": "~0.0.7",
+    "express": "~3.3.1"
   },
   "devDependencies": {},
   "scripts": {
