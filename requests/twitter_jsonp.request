@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>https://api.twitter.com/1/statuses/user_timeline.json</string>
+	<string>https://api.twitter.com/1.1/statuses/user_timeline.json</string>
 	<key>followRedirect</key>
 	<false/>
 	<key>handleJSONPCallbacks</key>
@@ -19,6 +19,8 @@
 		$("&lt;br /&gt;").appendTo(".jsonpresults");
 	});
 }</string>
+	<key>oauthToken</key>
+	<string>x-coredata://2BEA36B7-2294-4893-A164-3A1F32224235/OAuthToken/p1</string>
 	<key>paramBodyUIChoice</key>
 	<integer>0</integer>
 	<key>parameters</key>

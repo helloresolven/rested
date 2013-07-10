@@ -1,7 +1,8 @@
 var express = require('express'),
     filed = require('filed'),
     url = require('url'),
-    fs = require('fs');
+    fs = require('fs'),
+    jsonxml = require('jsontoxml');
 
 var app = express();
 
@@ -30,7 +31,7 @@ app.get('/test.html', function(req, res) {
 });
 
 var basicAuth = express.basicAuth(function(u, p) {
-  return u === "test" && p === "test";
+  return u === "test";
 }, "Treat yo' self, with a password.");
 
 app.all('/auth', basicAuth, function(req, res) {
@@ -52,7 +53,12 @@ app.get('/clear-cookie', function(req, res) {
 });
 
 app.all('*', function(req, res) {
-  res.json(200, req.info);
+  if(req.accepts('json')) {
+    res.json(200, req.info);
+  } else {
+    res.set('Content-Type', 'application/xml');
+    res.send(200, jsonxml(req.info));
+  }
 });
 
 app.listen(3000);
